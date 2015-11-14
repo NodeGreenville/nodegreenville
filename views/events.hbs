@@ -1,22 +1,14 @@
-<h1>{{group.name}}</h1>
-
-<div>
-	<table>
-		<thead>
-			<tr>
-				<th>Event</th>
-				<th>Venue</th>
-				<th>Time</th>
-			</tr>
-		</thead>
-		<tbody>
-			{{#each events}}
-				<tr>
-					<td>{{this.name}}</td>
-					<td>{{this.venue.address_1}}</td>
-					<td>{{this.time}}</td>
-				</tr>
-			{{/each}}
-		</tbody>
-	</table>
+<div class="container">
+	{{#each events}}
+		<div class="container event">
+			<div class="row">
+				<div class="col-xs-1 date-box">
+				</div>
+				<div class="col-xs-11 info">
+					{{this.name}}
+					{{this.venue.address_1}}
+				</div>
+			</div>
+		</div>
+	{{/each}}
 </div>
