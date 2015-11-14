@@ -1,0 +1,22 @@
+<h1>{{group.name}}</h1>
+
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Event</th>
+				<th>Venue</th>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each events}}
+				<tr>
+					<td>{{this.name}}</td>
+					<td>{{this.venue.address_1}}</td>
+					<td>{{this.time}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
