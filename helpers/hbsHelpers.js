@@ -8,7 +8,7 @@ var HbsHelpers = function(hbs) {
 
 	hbs.registerHelper('timeFormat', function(context, block) {
 		var format = block.hash.format || 'h:mm a';
-		return moment(context).utc().add('milliseconds', block.hash.utc).format(format);
+		return moment(context).utc().add(block.hash.utc, 'milliseconds').format(format);
 	});
 
 	hbs.registerHelper('daysLeft', function(context, block) {
