@@ -26,9 +26,5 @@ function renderIndex(res, next, err, results) {
 		return next(err);
 	}
 
-	for(var i=0; i<results.events.results.length; i++) {
-		console.log(results.events.results[i]);
-	}
-
 	res.render('events', { group: results.group, events: results.events.results });
 }

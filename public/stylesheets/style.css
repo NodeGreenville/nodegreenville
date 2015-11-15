@@ -6,6 +6,7 @@ Highlight: #436B32
 Toggle Hover: #588244
 
 Font Color Dark: #545555
+Font Color Light: #AEAFAF
 
 Item Background: #F8F9F9
 Item Border: #E8E8E7
@@ -75,17 +76,63 @@ body {
 /* Events */
 
 .event {
+	display: table;
 	margin-top: 10px;
-	height: 100px;
 	background-color: #F8F9F9;
 	border-bottom: 3px solid #E8E8E7;
 }
 
+.event .event-row {
+	display: table-row;
+}
+
 .event .date-box {
-	height: 100px;
-	background-color: #7FBD41;
+	display: table-cell;
+  float: none;
+  vertical-align: middle;
+  color: #7FBD41;
+  text-align: center;
+}
+
+.event .date {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.event .day {
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 700;
 }
 
 .event .info {
-	padding-top: 15px;
+	padding: 10px;
+}
+
+.event .name {
+	font-size: 25px;
+	font-weight: 700;
+	color: #7FBD41;
+}
+
+.event .venue {
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #545555;
+}
+
+.event .address {
+	color: #AEAFAF;
+}
+
+.event .description {
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+.event .stats {
+	color: #AEAFAF;
+	float: left;
+	margin-right: 20px;
 }

@@ -1,14 +1,5 @@
 <div class="container">
 	{{#each events}}
-		<div class="container event">
-			<div class="row">
-				<div class="col-xs-1 date-box">
-				</div>
-				<div class="col-xs-11 info">
-					{{this.name}}
-					{{this.venue.address_1}}
-				</div>
-			</div>
-		</div>
+		{{> event}}
 	{{/each}}
 </div>
