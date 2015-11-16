@@ -7,8 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-hbs');
 
-process.env.MEETUP_GROUP_NAME && process.env.MEETUP_API ||
-require('dotenv').config();
+ require('dotenv').config();
 
 var home = require('./routes/home');
 var events = require('./routes/events');
