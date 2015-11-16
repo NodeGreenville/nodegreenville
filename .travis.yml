@@ -1,8 +1,11 @@
 language: node_js
 node_js:
-  - "0.12"
-  - "0.10"
-
-
+- '0.12'
+- '0.10'
+env:
+  matrix:
+  - MEETUP_GROUP_NAME=NodeGreenville
+  global:
+    secure: ldU/Euzs1AvCeOTroRhjoyU9gx/cblAneaNbYgq5dNdPOkbQR2JjtlS3e+mr3aY42sRjuMBvUUjrPzWXx1hcbjBlhr6lF30yOE3c8prXwEySdCnkExGQ+QUft3s6sMEsfPIHVMBmAQrcha4WNtFyGXT4CoQWNE+hfK703UqKrbeMBC07pbuWNvcueGuqN0D9beqy8M95Y7KGO3L6C0fZjoTxgUWbi+kp+U2rBIE4/dXv7dkGO8cu9lAfd1qBB2tS4MBxOTot3EMkcWuddMLBfR4F88PiWmxILE081Sf7LEN4gdE0K/KkzTe1hWekqlRf5KDoJOkqVig0g6Jv2pAx0U8Ua5Kif65+KsQZQkf+bxMeSJwPFF7mO9q1cUs0/zxHeka3xl7lLqkkzHbtlzaHVXs1sDHntG/R5688YtdAEhVkrhcqwUZSN008gGrK0csOoajhxYH/gnZ/8aP4uRtt9txtnz5kaUbpT39WugSQZoiiuOge45V62ea1zUyAWthaLdFqSvgPFgELVI/HLVMEEyew4Lp0FO9IjPd6Am/0pnrtrOBknOjO5YJ5jGSDIHD2ZF+7kMuKt43pCACnsAju4ykl/GXJ4k+QPWuj8ukbEyldoFFNTkM79Nd8qoODpcHtHuNFCZrjiIEdyjCUDNYNnGJ8+FU8V1mB+xwWO2SkBXY=
 before_script:
-  - npm install -g mocha
+- npm install -g mocha
