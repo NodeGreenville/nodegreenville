@@ -2,9 +2,6 @@ language: node_js
 node_js:
 - '0.12'
 - '0.10'
-env:
-- MEETUP_GROUP_NAME=NodeGreenville
-- secure: JUFqZzl867Dsbgj3LkJyhnlEopOhPh79MJiPv83/xYoHPUrVBg4cjneh0He6OIpPSSeiUTBGSaJhaWpBjybW0ymlBa66maj/lAVgNIoYLty2rFndjYhvHVZpTDm2tnE3Nys8+EfEXb5gvYWemn3oqGhhh/FHADGHU45iq8SN5vXuIqnNRzLpAGnkBj+u0uPjusspf+NF+bTYLopCmeoihHh/vVFxUVq0aL299Keyaf7/Z+X+BnAvsBIeoV4XVOWn/HLQApC25xSX3obBRWPdZwgf+18KCnUJAKpFC0i2LSs53D3XlRzf2D+cHGxw0IqLoTUbbUIb0XWIICntHLJOIyIMlQHBzAyRT+HJ/l/KwNnfEhNcyDq/bTzMW+9luxAo1x07+yumJPVkyxiMwqmjFcvd4LWeD2qDZNukLONtl5sZVC3V2V82gugOi5hMmW9xnmsQpGZWZJGOCVwY5sf9LtuQlAQdweIx+6ksKYHUAud8IRV0y6lf59mEOHhEOucXq5Prie9YBIW5gDWdCg6eqvi0KHxt61aXqwWOYlnBclGIGwa8boi54FA0jTHVrjg5NAchGlVbNZJ3HdSkjhkqqEGa3zuzX296L9bEf/n6ggjjdN1eFIaGrh18RSPVJ+WvTRprkQmIiKtO/xvU05EGmw3L0I7VWCXdovWEML70/qI=
 before_script:
 - npm install -g mocha
 - export TZ=America/New_York

@@ -20,7 +20,7 @@ describe('Routes', function() {
 
 	it('should respond with 200 from blog', function(done) {
 		request(app)
-			.get('/blog')
+			.get('/blog/')
 			.expect(200, done);
 	});
 

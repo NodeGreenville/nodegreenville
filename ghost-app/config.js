@@ -31,7 +31,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
-        url: 'http://localhost:2368/blog',
+        url: 'http://localhost:2368/blog/',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
