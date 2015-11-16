@@ -18,6 +18,12 @@ describe('Routes', function() {
 			.expect(200, done);
 	});
 
+	it('should respond with 200 from blog', function(done) {
+		request(app)
+			.get('/blog')
+			.expect(200, done);
+	});
+
 	it('should respond with 404 from everything else', function(done) {
 		request(app)
 			.get('/foo/bar')
@@ -31,7 +37,7 @@ describe('Handlebars Helper', function() {
 	beforeEach(function() {
 		this.fields = { time: 1447891200000 }; // November 18, 2015 7:00 PM
 	});
-	
+
 	describe('dateFormat helper test', function() {
 		it('should format timestamp to day of month', function() {
 			var template = hbs.compile("{{dateFormat time format='DD'}}");
