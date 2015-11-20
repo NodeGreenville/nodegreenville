@@ -1,3 +1,6 @@
+
+![Build Status](https://travis-ci.org/NodeGreenville/nodegreenville.svg?branch=fix-tz-for-travis)
+
 # NodeGreenville
 Node Greenville web app
 
