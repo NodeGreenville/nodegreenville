@@ -6,12 +6,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-hbs');
-
- require('dotenv').config();
-
 var home = require('./routes/home');
 var events = require('./routes/events');
-
 var app = express();
 
 // view engine setup
