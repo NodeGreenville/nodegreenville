@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var hbs = require('express-hbs');
 
 /* Check for travis environment variables before getting .env files */
-process.env.MEETUP_API && process.env.MEETUP_GROUP_NAME || require('dotenv').config()
+//process.env.MEETUP_API && process.env.MEETUP_GROUP_NAME || require('dotenv').config()
 
 var home = require('./routes/home');
 var events = require('./routes/events');

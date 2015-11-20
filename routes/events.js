@@ -1,6 +1,10 @@
 var express = require('express');
 var async = require('async');
 var router = express.Router();
+
+process.env.MEETUP_API && process.env.MEETUP_GROUP_NAME ||
+require('dotenv').config('../.env')
+
 var meetup = require('meetup-api')({
 	key: process.env.MEETUP_API
 });

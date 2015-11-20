@@ -5,23 +5,6 @@ var hbs = require('express-hbs');
 var app = require('../app');
 var events = require('../routes/events')
 
-function blogStatusCodes(res) {
-	if (303 == res.statusCode || 200 == res.statusCode) {
-
-	} else {
-		throw new Error('Received: ' + res.statusCode);
-	}
-}
-
-function eventStatusCodes(res) {
-	code = res.statusCode;
-	if (200 == code || 304 == code) {
-
-	} else {
-		throw new Error('Received: ' + code);
-	}
-}
-
 describe('Routes', function() {
 	it('should respond with 200 from home', function(done){
 		request(app)
@@ -30,18 +13,20 @@ describe('Routes', function() {
 	});
 
 	it('should respond with 200 from events', function(done) {
+		/* Takes about 3500ms to complete on average.
+		 *  Normal timeout was set to 2000ms which
+		 *  yields a false negative for this test case.
+		 */
 		this.timeout(5000);
 		request(app)
 			.get('/events')
-			.expect(eventStatusCodes)
-			.end(done);
+			.expect(200, done);
 	});
 
-	it('should respond with 200 or 303 from blog', function(done) {
+	it('should respond with 200 blog', function(done) {
 		request(app)
-			.get('/blog')
-			.expect(blogStatusCodes)
-			.end(done);
+			.get('/blog/') // this returns 303 sans the last forward slash
+			.expect(200, done);
 	});
 
 	it('should respond with 404 from everything else', function(done) {
