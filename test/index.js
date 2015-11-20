@@ -23,4 +23,4 @@ describe('Routes', function() {
 			.expect(checkForMultipleGhostStatusCodes)
 			.end(done);
 	});
-})
+});
