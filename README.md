@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/NodeGreenville/nodegreenville.svg?branch=events_endpoint)](https://travis-ci.org/NodeGreenville/nodegreenville)
 # NodeGreenville
 Node Greenville web app
 
