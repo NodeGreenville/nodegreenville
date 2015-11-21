@@ -18,6 +18,10 @@ body {
 	color: #545555;
 }
 
+.font-brand {
+	color: #7FBD41;
+}
+
 /* Navbar */
 
 .navbar {
@@ -71,6 +75,40 @@ body {
 
 #nav-logo {
 	max-height: 30px;
+}
+
+/* Hero */
+
+.hero {
+	padding: 100px;
+}
+
+.hero h1 {
+	font-size: 40px;
+	color: #AEAFAF;
+}
+
+/* Meetup Section */
+
+.meetup {
+	padding: 150px;
+	background: url('/images/ng_pattern.jpg');
+}
+
+.meetup h2 {
+	color: #7FBD41;
+	font-size: 35px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.meetup a {
+	color: #7FBD41;
+	text-decoration: none;
+}
+
+.meetup a:hover {
+	color: #588244;
 }
 
 /* Events */
@@ -135,4 +173,65 @@ body {
 	color: #AEAFAF;
 	float: left;
 	margin-right: 20px;
+}
+
+/* Footer */
+
+.footer {
+	padding: 50px;
+	color: #AEAFAF;
+	background-color: #FFF;
+	text-align: center;
+}
+
+.footer a {
+	color: #AEAFAF;;
+}
+
+.footer .copyright {
+	margin: 20px;
+}
+
+.footer #nav-footer {
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+}
+
+.footer-icon {
+	font-size: 20px;
+	padding: 0 5px;
+}
+
+.img-icon {
+	height: 19px;
+	display: inline-block;
+}
+
+.img-icon .icon {
+	height: 24px;
+	padding: 0 5px 5px 5px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1017px) {
+	.hero {
+		padding: 50px;
+	}
+
+	.meetup {
+		padding: 50px;
+	}
+}
+
+@media (max-width: 555px) {
+
+	.hero h1 {
+		font-size: 30px;
+	}
+
+	.meetup h2 {
+		font-size: 20px;
+	}
 }
