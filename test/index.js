@@ -24,6 +24,7 @@ describe('Routes', function() {
 	});
 
 	it('should respond with 200 blog', function(done) {
+		this.timeout(5000);
 		request(app)
 			.get('/blog/') // this returns 303 sans the last forward slash
 			.expect(200, done);
