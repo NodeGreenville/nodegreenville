@@ -5,3 +5,4 @@ logs
 *.db
 npm-debug.log*
 node_modules
+ghost-dev.db
