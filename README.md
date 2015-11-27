@@ -7,10 +7,7 @@ Node Greenville web app
 Successful merges to the 'dev' branch will deploy to https://nodegreenville-staging.herokuapp.com
 Successful merges to the 'master' branch will deploy to https://nodegreenville-prod.herokuapp.com
 
-Pull requests will not run a build but not deploy until merged.
-
-#Database
-The heroku deployments for staging and prod have a Postgres database that SHOULD be available at `process.env.DATABASE_URL`
+Pull requests will run a build, but will not deploy until merged.
 
 ## Installation on Local Machine
 Add installation steps here.
@@ -25,6 +22,7 @@ http://localhost:3000/blog to access the ghost blog
 ## Architecture Decisions
 
 ### Postgres
+The heroku deployments for staging and prod have a Postgres database that SHOULD be available at `process.env.DATABASE_URL`
 
 ### Ghost (as Middleware)
 The [GhostJS](https://ghost.org) portion of the code is located in the ```./ghost-app``` directory.
