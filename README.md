@@ -1,5 +1,6 @@
 
 [![Build Status](https://travis-ci.org/NodeGreenville/nodegreenville.svg?branch=events_endpoint)](https://travis-ci.org/NodeGreenville/nodegreenville)
+[![Code Climate](https://codeclimate.com/github/NodeGreenville/nodegreenville/badges/gpa.svg)](https://codeclimate.com/github/NodeGreenville/nodegreenville)
 
 # NodeGreenville
 Node Greenville web app
