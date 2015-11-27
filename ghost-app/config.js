@@ -11,7 +11,21 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
+        url: 'https://nodegreenville-prod.herokuapp.com',
+        mail: {},
+        database: {
+            client: 'pg',
+            connection: process.env.DATABASE_URL,
+            debug: false
+        },
+
+        server: {
+            host: '127.0.0.1',
+            port: '2368'
+        }
+    },
+    staging: {
+        url: 'https://nodegreenville-staging.herokuapp.com',
         mail: {},
         database: {
             client: 'pg',
@@ -49,10 +63,8 @@ config = {
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: {
-            client: 'sqlite3',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
-            },
+            client: 'pg',
+            connection: process.env.DATABASE_URL,
             debug: false
         },
         // #### Server
