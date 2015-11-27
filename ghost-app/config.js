@@ -11,23 +11,31 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
+        url: 'https://nodegreenville-prod.herokuapp.com/blog/',
         mail: {},
         database: {
-            client: 'postgres',
-            connection: {
-                //filename: path.join(__dirname, '/content/data/ghost.db')
-                host: 'ec2-50-16-229-91.compute-1.amazonaws.com',
-                database: 'de8llrbnmnpusf',
-                user: 'sqacgjxqcwxjwv',
-                port: '5432'
-            },
+            client: 'pg',
+            connection: process.env.DATABASE_URL,
             debug: false
         },
 
         server: {
-            host: '127.0.0.1',
-            port: '2368'
+            host: '0.0.0.0',
+            port: process.env.PORT
+        }
+    },
+    staging: {
+        url: 'https://nodegreenville-staging.herokuapp.com/blog/',
+        mail: {},
+        database: {
+            client: 'pg',
+            connection: process.env.DATABASE_URL,
+            debug: true
+        },
+
+        server: {
+            host: '0.0.0.0',
+            port: process.env.PORT
         }
     },
 
@@ -35,7 +43,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
-        url: 'http://localhost:3000/blog',
+        url: 'http://localhost:3000/blog/',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions

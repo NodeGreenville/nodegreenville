@@ -1,7 +1,6 @@
 language: node_js
 node_js:
 - '0.12'
-- '0.10'
 before_script:
 - npm install -g mocha
 - export TZ=America/New_York
@@ -15,3 +14,6 @@ deploy:
   on:
     repo: NodeGreenville/nodegreenville
     all_branches: true
+notifications:
+  slack:
+    secure: auOEDsUrqf8kreqhKBECGu4wwjGJkB21AozRbAJj5vbWmJQIxtFHYcBrRjv2VTJxNK4DwQaulGyx1/vycJBn5SwRjnfZLiwLurg+55yauHj0HbSFiuJSaFKJ+8z1A+F2KHNEA12DpN/6VEwAemGGbsG5YmmdA11PJyadr59ZIzNRNlIlVxX38j4P4A1+A+BGRaJyTs/W5DER4kJWGLHo8h7Gd7CO5okf9ie26ZFjCsoUZvRLFiIVE0BEMKPck/4pyIUglzpePyEcU6IqKyeyuvljmLHnXXmuy62kJ5qDmA55bKz1wOOeXRb7c1SkE1QJoVbJ+OZ96BIx/dnU490xT4b2sMjjdb9VBCG2CIYkpv6srnnhCM2Nlg3hMySE9i2KLix/HVgkLgm6sBjEd9bfJMNdKZibVTh600opYYZoMyMLGOUSSDN3C+bgKwNfTBb7ChzgG3T2dZeZvv68h1OcZpyacuPmivnc5TUs9pxD6EVxQSMSmohixnt28DiXxKecpxJH5Rne+0ZJGa7QH3N54b9O3hTfNx3AIGiV/m/ERUADIbhahMRZnGSMTsrRh97fV0tRgY/WNztkVPp6ZO6Y44AuF/dSJpp1Sb6Y8NgEct6pz5HZIFSfK3/MSS3VVC7FRzQ+ErGpb3+MB5MrepibyWLS2TGFwaRNabW6Jp+YoD8=
