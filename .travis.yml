@@ -9,9 +9,9 @@ deploy:
   provider: heroku
   api_key:
     secure: abN4OQnV+4SN1kV0w7tTk69ZreJbtDXuovTPQXhxIOKuAbrTXLPk77x0oEMJHPtJxynQPrJ7GgDdDOlGcvkTL2U/8DdcVvTOiHXvGlyHMd9pq4SVIiLU77OZA4A/UziyswOn7br4X97wV0KemRKSJw+o5ff21wYQ57Qs1pS0aeiM5P7LsBeCXe6RsU0ouxvi+rYiphb3ZpT2geIcOZvEBbnbHs72B0f5lQWjCzEbKZfqPFqDj0YR+KOFo1zktaBtIW4MLBKh24cJFq+UFTY7AeTdlXctMVytwGKQzEOwepRCNUkiobHjbGFikqC+mMm2LpWQaRoVpG7xGfyJ5KGePwHcVR3/B22zvxGBv0faCf3BCljtajOSv9NUdDJUyx60pPtHiyoCPO0NAfiTvPCwLcU7y8bRY26xGmdttjv8gQ2vdEpwiW+158LzjGZxeeUJnrCsusiPfvlOCt/iFZsv8j3LLVIB6lIMqinefO7oEiJqRFYuiAootlWP7g8Lw1S5nE0lMK6+fLFqzcLb++7hj+2M9KAthdsNwTx0euC/7pglY+/19OzDRvIVxIzcxwTt/lsW75WRcTJTGLmyReWQlWTHsO1gs6+g02wWswELCQdLt31h3HhX1KYlYw3qyVVGtW1nKZF7M0runDOpmsqL84pettajlSglTxuiUtaI7qs=
-  app: nodegreenville
+  app:
     dev: nodegreenville-staging
-    master: nodegreenville-production
+    master: nodegreenville-prod
   on:
     repo: NodeGreenville/nodegreenville
     all_branches: true
