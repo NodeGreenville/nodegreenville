@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'https://nodegreenville-prod.herokuapp.com',
+        url: 'https://nodegreenville-prod.herokuapp.com/blog',
         mail: {},
         database: {
             client: 'pg',
@@ -20,22 +20,22 @@ config = {
         },
 
         server: {
-            host: '127.0.0.1',
-            port: '2368'
+            host: '0.0.0.0',
+            port: process.env.PORT
         }
     },
     staging: {
-        url: 'https://nodegreenville-staging.herokuapp.com',
+        url: 'https://nodegreenville-staging.herokuapp.com/blog',
         mail: {},
         database: {
             client: 'pg',
             connection: process.env.DATABASE_URL,
-            debug: false
+            debug: true
         },
 
         server: {
-            host: '127.0.0.1',
-            port: '2368'
+            host: '0.0.0.0',
+            port: process.env.PORT
         }
     },
 
