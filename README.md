@@ -4,7 +4,13 @@
 # NodeGreenville
 Node Greenville web app
 
-running at https://rocky-shelf-8513.herokuapp.com
+Successful merges to the 'dev' branch will deploy to https://nodegreenville-staging.herokuapp.com
+Successful merges to the 'master' branch will deploy to https://nodegreenville-prod.herokuapp.com
+
+Pull requests will not run a build but not deploy until merged.
+
+#Database
+The heroku deployments for staging and prod have a Postgres database that SHOULD be available at `process.env.DATABASE_URL`
 
 ## Installation on Local Machine
 Add installation steps here.
