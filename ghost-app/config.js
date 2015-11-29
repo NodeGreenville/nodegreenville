@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'https://nodegreenville-prod.herokuapp.com/blog/',
+        url: 'https://nodegreenville-prod.herokuapp.com/blog',
         mail: {},
         database: {
             client: 'pg',
@@ -21,11 +21,11 @@ config = {
 
         server: {
             host: '0.0.0.0',
-            port: process.env.PORT
+            port: 'process.env.PORT'
         }
     },
     staging: {
-        url: 'https://nodegreenville-staging.herokuapp.com/blog/',
+        url: 'https://nodegreenville-staging.herokuapp.com/blog',
         mail: {},
         database: {
             client: 'pg',
@@ -35,7 +35,7 @@ config = {
 
         server: {
             host: '0.0.0.0',
-            port: process.env.PORT
+            port: 'process.env.PORT'
         }
     },
 
@@ -43,7 +43,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
-        url: 'http://localhost:3000/blog/',
+        url: 'http://localhost:3000/blog',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
@@ -75,7 +75,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '3000'
+            port: 'process.env.PORT'
         },
         // #### Paths
         // Specify where your content directory lives
