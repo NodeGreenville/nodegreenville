@@ -1,5 +1,5 @@
-/* 
-Colors 
+/*
+Colors
 Brand: #7FBD41
 Highlight: #436B32
 
@@ -60,14 +60,14 @@ body {
 .navbar-inverse .navbar-nav > li > a:focus {
 	color: #fff;
 }
-.navbar-inverse .navbar-nav > .active > a, 
-.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
 	color: #fff;
 	background-color: #fff;
 }
-.navbar-inverse .navbar-nav > .open > a, 
-.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
 	color: #fff;
 	background-color: #fff;
@@ -185,7 +185,7 @@ body {
 }
 
 .footer a {
-	color: #AEAFAF;;
+	color: #AEAFAF;
 }
 
 .footer .copyright {
