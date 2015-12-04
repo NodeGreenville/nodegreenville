@@ -16,6 +16,10 @@ var HbsHelpers = function(hbs) {
 		var currentDate = moment();
 		return eventDate.diff(currentDate, 'days');
 	});
+
+    hbs.registerHelper('printContext', function(context, block) {
+        return JSON.stringify(context);
+    });
 }
 
 module.exports = HbsHelpers;
