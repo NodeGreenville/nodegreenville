@@ -1,5 +1,6 @@
 var express = require('express');
 var async = require('async');
+var moment = require('moment');
 var router = express.Router();
 
 /* Check for travis environment variables before getting .env files */

@@ -1,2 +1,23 @@
 {{!< ./layout/default}}
 <div id='calendar'></div>
+
+{{#contentFor "singleViewStyles"}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.5.0/fullcalendar.min.css">
+{{/contentFor}}
+
+{{#contentFor "singleViewScripts"}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.5.0/fullcalendar.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        header: {
+            left: 'month,agendaWeek,agendaDay',
+            center: 'title',
+            right: 'prev,next'
+        },
+        events: {{{printContext forCalendar}}}
+    })
+});
+</script>
+{{/contentFor}}
