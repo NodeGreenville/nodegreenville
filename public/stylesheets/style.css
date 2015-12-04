@@ -181,6 +181,25 @@ body {
     padding: 20px 0px;
 }
 
+#eventModal .modal-dialog {
+    top: 30%;
+}
+
+#eventModal .modal-content {
+    border-radius: 12px 12px 10px 10px
+}
+
+#eventModal .modal-header {
+    background-color: #7FBD41;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+#eventModal .modal-header .close:hover,
+#eventModal .modal-header .close:focus {
+    color: #fff;
+}
+
 /* Footer */
 
 .footer {
