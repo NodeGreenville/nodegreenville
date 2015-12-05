@@ -113,68 +113,6 @@ body {
 
 /* Events */
 
-.event {
-	display: table;
-	margin-top: 10px;
-	background-color: #F8F9F9;
-	border-bottom: 3px solid #E8E8E7;
-}
-
-.event .event-row {
-	display: table-row;
-}
-
-.event .date-box {
-	display: table-cell;
-  float: none;
-  vertical-align: middle;
-  color: #7FBD41;
-  text-align: center;
-}
-
-.event .date {
-	font-size: 30px;
-	font-weight: 700;
-}
-
-.event .day {
-	margin-top: 20px;
-	font-size: 20px;
-	font-weight: 700;
-}
-
-.event .info {
-	padding: 10px;
-}
-
-.event .name {
-	font-size: 25px;
-	font-weight: 700;
-	color: #7FBD41;
-}
-
-.event .venue {
-	margin-top: 10px;
-	font-size: 20px;
-	font-weight: 700;
-	color: #545555;
-}
-
-.event .address {
-	color: #AEAFAF;
-}
-
-.event .description {
-	font-weight: 300;
-	margin-top: 20px;
-}
-
-.event .stats {
-	color: #AEAFAF;
-	float: left;
-	margin-right: 20px;
-}
-
 #calendar {
     margin: auto;
     width: 75%;
@@ -182,14 +120,16 @@ body {
 }
 
 #eventModal .modal-dialog {
-    top: 30%;
+    top: 10%;
 }
 
 #eventModal .modal-content {
-    border-radius: 12px 12px 10px 10px
+    border-radius: 12px 12px;
 }
 
 #eventModal .modal-header {
+    font-size: 25px;
+	font-weight: 700;
     background-color: #7FBD41;
     color: #fff;
     border-radius: 10px 10px 0 0;
@@ -198,6 +138,57 @@ body {
 #eventModal .modal-header .close:hover,
 #eventModal .modal-header .close:focus {
     color: #fff;
+}
+
+#eventModal .modal-body {
+	background-color: #F8F9F9;
+    border-radius: 0 0 10px 10px;
+}
+
+#eventModal .modal-body .row {
+    display: flex;
+    align-items: center;
+}
+
+#eventModal .modal-body .date-box {
+    color: #7FBD41;
+    text-align: center;
+}
+
+#eventModal .modal-body .date {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+#eventModal .modal-body .day {
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#eventModal .modal-body .info {
+	padding: 10px;
+}
+
+#eventModal .modal-body .venue {
+	font-size: 20px;
+	font-weight: 700;
+	color: #545555;
+}
+
+#eventModal .modal-body .address {
+	color: #AEAFAF;
+}
+
+#eventModal .modal-body .description {
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+#eventModal .modal-body .stats {
+	color: #AEAFAF;
+	float: left;
+	margin-right: 20px;
 }
 
 /* Footer */

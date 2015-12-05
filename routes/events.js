@@ -38,7 +38,7 @@ function renderIndex(res, next, err, results) {
         calEvent.start = moment(event.time).utc().add(event.utc_offset, 'ms').format();
         calEvent.end = moment(event.time).utc().add(event.utc_offset, 'ms').add(event.duration, 'ms').format();
         calEvent.venue = event.venue.name;
-        calEvent.address = event.venue.address;
+        calEvent.address = event.venue.address_1;
         calEvent.description = event.description;
         calEvent.rsvp = event.yes_rsvp_count;
         return calEvent;

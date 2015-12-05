@@ -1,18 +1,16 @@
-<div class="col-md-8 col-md-offset-2 event">
-	<div class="row event-row">
-		<div class="col-xs-2 date-box">
-			<div class="date">{{dateFormat this.time format='DD'}}</div>
-			<div class="month">{{dateFormat this.time format='MMM'}}</div>
-			<div class="day">{{dateFormat this.time format='ddd'}}</div>
-			<div class="time">{{timeFormat this.time format='h a' utc=this.utc_offset}}</div>
-		</div>
-		<div class="col-xs-10 info">
-			<div class="name">{{this.name}}</div>
-			<div class="venue">{{this.venue.name}}</div>
-			<div class="address">{{this.venue.address_1}}</div>
-			<div class="description">{{{this.description}}}</div>
-			<div class="stats">{{daysLeft this.time}} days left</div>
-			<div class="stats">{{this.yes_rsvp_count}} going</div>
-		</div>
-	</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-xs-3 date-box">
+        	<div class="date"></div>
+        	<div class="month"></div>
+        	<div class="day"></div>
+        </div>
+        <div class="col-xs-9 info">
+        	<div class="venue"></div>
+        	<div class="address"></div>
+        	<div class="description"></div>
+        	<div id=daysLeft class="stats"></div>
+        	<div id=rsvp class="stats"></div>
+        </div>
+    </div>
 </div>
