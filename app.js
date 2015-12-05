@@ -13,7 +13,6 @@ var app = express();
 // view engine setup
 app.engine('hbs', hbs.express4({
 	partialsDir: __dirname + '/views/layout/partials',
-	defaultLayout: __dirname + '/views/layout/default.hbs',
 	layoutsDir: __dirname + '/views/layout'
 }));
 app.set('view engine', 'hbs');
