@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/NodeGreenville/nodegreenville.svg?branch=events_endpoint)](https://travis-ci.org/NodeGreenville/nodegreenville)
+[![Build Status](https://travis-ci.org/NodeGreenville/nodegreenville.svg?branch=master)](https://travis-ci.org/NodeGreenville/nodegreenville)
 [![Code Climate](https://codeclimate.com/github/NodeGreenville/nodegreenville/badges/gpa.svg)](https://codeclimate.com/github/NodeGreenville/nodegreenville)
 
 # NodeGreenville
@@ -11,7 +11,7 @@ Successful merges to the 'master' branch will deploy to https://nodegreenville-p
 Pull requests will run a build, but will not deploy until merged.
 
 ## Installation on Local Machine
-Add installation steps here.
+
 1. Clone https://github.com/NodeGreenville/nodegreenville
 2. ```cd nodegreenville```
 3. Run ```npm install```
