@@ -79,22 +79,14 @@ describe('Handlebars Helper', function() {
 		this.fields = { time: 1447891200000 }; // November 18, 2015 7:00 PM
 	});
 
-	describe('dateFormat helper test', function() {
-		it('should format timestamp to day of month', function() {
-			var template = hbs.compile("{{dateFormat time format='DD'}}");
+	describe('isoFormat helper test', function() {
+		it('should format timestamp iso8601 string', function() {
+            this.fields['utc_offset'] = -18000000;
+			var template = hbs.compile("{{isoFormat time utc=utc_offset}}");
 			var result = template(this.fields).trim();
-			var expected = '18';
+			var expected = '2015-11-18T19:00:00+00:00';
 			expect(result).to.equal(expected);
 		});
 	});
 
-	describe('timeFormat helper test', function() {
-		it('should format timestamp to hour and post or ante meridiem', function() {
-			this.fields['utc_offset'] = -18000000;
-			var template = hbs.compile("{{timeFormat time format='h a' utc=utc_offset}}");
-			var result = template(this.fields).trim();
-			var expected = '7 pm';
-			expect(result).to.equal(expected);
-		});
-	});
 });
