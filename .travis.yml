@@ -13,7 +13,7 @@ deploy:
     master: nodegreenville-prod
   on:
     repo: NodeGreenville/nodegreenville
-    branches:
+    branch:
     - dev
     - master
 notifications:
