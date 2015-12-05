@@ -31,7 +31,9 @@ $(document).ready(function() {
             center: 'prev title next',
             right: ''
         },
-        events: {{{printContext forCalendar}}},
+        events: [{{#each events}}
+		          {{> calEvents}}
+	            {{/each}}],
         eventColor: '#7FBD41',
         eventRender: function (event, element) {
             element.find('.fc-time').html(moment(event.start).format('h:mm a') +

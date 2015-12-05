@@ -32,19 +32,5 @@ function renderIndex(res, next, err, results) {
 		return next(err);
 	}
 
-    var calEvents = results.events.results.map(function(event) {
-        var calEvent = {};
-        calEvent.title = event.name;
-        calEvent.start = moment(event.time).utc().add(event.utc_offset, 'ms').format();
-        calEvent.end = moment(event.time).utc().add(event.utc_offset, 'ms').add(event.duration, 'ms').format();
-        calEvent.venue = event.venue.name;
-        calEvent.address = event.venue.address_1;
-        calEvent.description = event.description;
-        calEvent.rsvp = event.yes_rsvp_count;
-        return calEvent;
-    });
-
-	res.render('events', { group: results.group,
-                           events: results.events.results,
-                           forCalendar: calEvents });
+	res.render('events', { group: results.group, events: results.events.results});
 }
