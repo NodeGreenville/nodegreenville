@@ -119,6 +119,17 @@ body {
     padding: 20px 0px;
 }
 
+.fc-event {
+    cursor: pointer;
+    border: 1px solid #7FBD41;
+    background-color: #7FBD41;
+}
+
+.fc-event:hover {
+    border: 1px solid #588244;
+    background-color: #588244;
+}
+
 #eventModal .modal-dialog {
     top: 10%;
 }
