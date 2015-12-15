@@ -130,8 +130,9 @@ body {
     background-color: #588244;
 }
 
-#eventModal .modal-dialog {
-    top: 10%;
+.fc-day-grid-event .fc-content {
+	white-space: normal;
+	overflow: visible;
 }
 
 #eventModal .modal-content {

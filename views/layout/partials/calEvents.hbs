@@ -1,7 +1,0 @@
-{ "title": "{{this.name}}",
-  "start": "{{isoFormat this.time utc=this.utc_offset}}",
-  "end": "{{isoFormat this.time utc=this.utc_offset duration=this.duration}}",
-  "venue": "{{this.venue.name}}",
-  "address": "{{this.venue.address_1}}",
-  "description": "{{{this.description}}}",
-  "rsvp": "{{this.yes_rsvp_count}}" } {{#unless @last}},{{/unless}}
