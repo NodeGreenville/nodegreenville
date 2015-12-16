@@ -17,11 +17,12 @@ function eventsRoute(req, res, next) {
 }
 
 function getGroup(callback) {
-	meetup.getGroup({urlname: process.env.MEETUP_GROUP_NAME}, callback);
+	meetup.getGroup({'urlname': process.env.MEETUP_GROUP_NAME}, callback);
 }
 
 function getEvents(callback) {
-	meetup.getEvents({'group_urlname': process.env.MEETUP_GROUP_NAME}, callback);
+	meetup.getEvents({'group_urlname': process.env.MEETUP_GROUP_NAME,
+                      'status': 'upcoming,past'}, callback);
 }
 
 function renderIndex(res, next, err, results) {
