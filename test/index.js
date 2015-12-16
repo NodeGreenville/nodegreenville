@@ -73,18 +73,16 @@ describe('Routes', function() {
 });
 
 describe('Handlebars Helper', function() {
-	var fields;
+    var fields;
 
-	beforeEach(function() {
-		this.fields = { time: 1447891200000 }; // November 18, 2015 7:00 PM
-	});
-
-	describe('isoFormat helper test', function() {
-		it('should format timestamp iso8601 string', function() {
-            this.fields['utc_offset'] = -18000000;
-			var template = hbs.compile("{{isoFormat time utc=utc_offset}}");
+	describe('constructJSON helper test', function() {
+		it('should convert meetup object to fc object', function() {
+            this.fields = {event: [{name: 'my event', time: 1450292400000,
+                duration: 5400000, venue: {name: 'place', address_1: '123 Street'},
+                description: 'fun', yes_rsvp_count: 0}]};
+			var template = hbs.compile("{{{constructJSON event}}}");
 			var result = template(this.fields).trim();
-			var expected = '2015-11-18T19:00:00+00:00';
+			var expected = '[{"title":"my event","start":"2015-12-16T19:00:00+00:00","end":"2015-12-16T20:30:00+00:00","venue":"place","address":"123 Street","description":"fun","rsvp":0}]';
 			expect(result).to.equal(expected);
 		});
 	});
