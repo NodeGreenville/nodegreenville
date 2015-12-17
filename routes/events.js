@@ -2,9 +2,7 @@ var express = require('express');
 var async = require('async');
 var router = express.Router();
 
-/* Check for travis environment variables before getting .env files */
-process.env.MEETUP_API && process.env.MEETUP_GROUP_NAME ||
-require('dotenv').config('../.env')
+require('dotenv').config({silent: true});
 
 var meetup = require('meetup-api')({
 	key: process.env.MEETUP_API
@@ -19,11 +17,12 @@ function eventsRoute(req, res, next) {
 }
 
 function getGroup(callback) {
-	meetup.getGroup({urlname: process.env.MEETUP_GROUP_NAME, fields: 'group_photo'}, callback);
+	meetup.getGroup({'urlname': process.env.MEETUP_GROUP_NAME}, callback);
 }
 
 function getEvents(callback) {
-	meetup.getEvents({'group_urlname': process.env.MEETUP_GROUP_NAME}, callback);
+	meetup.getEvents({'group_urlname': process.env.MEETUP_GROUP_NAME,
+                      'status': 'upcoming,past'}, callback);
 }
 
 function renderIndex(res, next, err, results) {
@@ -31,5 +30,5 @@ function renderIndex(res, next, err, results) {
 		return next(err);
 	}
 
-	res.render('events', { group: results.group, events: results.events.results });
+	res.render('events', { group: results.group, events: results.events.results});
 }

@@ -13,7 +13,6 @@ var app = express();
 // view engine setup
 app.engine('hbs', hbs.express4({
 	partialsDir: __dirname + '/views/layout/partials',
-	defaultLayout: __dirname + '/views/layout/default.hbs',
 	layoutsDir: __dirname + '/views/layout'
 }));
 app.set('view engine', 'hbs');
@@ -23,7 +22,7 @@ app.set('views', __dirname + '/views');
 require('./helpers/hbsHelpers')(hbs);
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

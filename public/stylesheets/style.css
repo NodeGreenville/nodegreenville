@@ -1,5 +1,5 @@
-/* 
-Colors 
+/*
+Colors
 Brand: #7FBD41
 Highlight: #436B32
 
@@ -60,14 +60,14 @@ body {
 .navbar-inverse .navbar-nav > li > a:focus {
 	color: #fff;
 }
-.navbar-inverse .navbar-nav > .active > a, 
-.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
 	color: #fff;
 	background-color: #fff;
 }
-.navbar-inverse .navbar-nav > .open > a, 
-.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
 	color: #fff;
 	background-color: #fff;
@@ -113,63 +113,91 @@ body {
 
 /* Events */
 
-.event {
-	display: table;
-	margin-top: 10px;
+#calendar {
+    margin: auto;
+    width: 75%;
+    padding: 20px 0px;
+}
+
+.fc-event {
+    cursor: pointer;
+    border: 1px solid #7FBD41;
+    background-color: #7FBD41;
+}
+
+.fc-event:hover {
+    border: 1px solid #588244;
+    background-color: #588244;
+}
+
+.fc-day-grid-event .fc-content {
+	white-space: normal;
+	overflow: visible;
+}
+
+#eventModal .modal-content {
+    border-radius: 12px 12px;
+}
+
+#eventModal .modal-header {
+    font-size: 25px;
+	font-weight: 700;
+    background-color: #7FBD41;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+#eventModal .modal-header .close:hover,
+#eventModal .modal-header .close:focus {
+    color: #fff;
+}
+
+#eventModal .modal-body {
 	background-color: #F8F9F9;
-	border-bottom: 3px solid #E8E8E7;
+    border-radius: 0 0 10px 10px;
 }
 
-.event .event-row {
-	display: table-row;
+#eventModal .modal-body .row {
+    display: flex;
+    align-items: center;
 }
 
-.event .date-box {
-	display: table-cell;
-  float: none;
-  vertical-align: middle;
-  color: #7FBD41;
-  text-align: center;
+#eventModal .modal-body .date-box {
+    color: #7FBD41;
+    text-align: center;
 }
 
-.event .date {
+#eventModal .modal-body .date {
 	font-size: 30px;
 	font-weight: 700;
 }
 
-.event .day {
+#eventModal .modal-body .day {
 	margin-top: 20px;
 	font-size: 20px;
 	font-weight: 700;
 }
 
-.event .info {
+#eventModal .modal-body .info {
 	padding: 10px;
 }
 
-.event .name {
-	font-size: 25px;
-	font-weight: 700;
-	color: #7FBD41;
-}
-
-.event .venue {
-	margin-top: 10px;
+#eventModal .modal-body .venue {
 	font-size: 20px;
 	font-weight: 700;
 	color: #545555;
 }
 
-.event .address {
+#eventModal .modal-body .address {
 	color: #AEAFAF;
 }
 
-.event .description {
+#eventModal .modal-body .description {
 	font-weight: 300;
 	margin-top: 20px;
 }
 
-.event .stats {
+#eventModal .modal-body .stats {
 	color: #AEAFAF;
 	float: left;
 	margin-right: 20px;
@@ -185,7 +213,7 @@ body {
 }
 
 .footer a {
-	color: #AEAFAF;;
+	color: #AEAFAF;
 }
 
 .footer .copyright {

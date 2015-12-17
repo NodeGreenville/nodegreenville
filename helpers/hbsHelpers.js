@@ -1,21 +1,21 @@
 var moment = require('moment');
 
 var HbsHelpers = function(hbs) {
-	hbs.registerHelper('dateFormat', function(context, block) {
-		var format = block.hash.format || 'MM/DD/YYYY';
-		return moment(context).format(format);
-	});
+    hbs.registerHelper('constructJSON', function(context, block) {
+        var calEvents = context.map(function(event) {
+            var calEvent = {};
+            calEvent.title = event.name;
+            calEvent.start = moment(event.time).utc().add(event.utc_offset, 'ms').format();
+            calEvent.end = moment(event.time).utc().add(event.utc_offset, 'ms').add(event.duration, 'ms').format();
+            calEvent.venue = event.venue.name;
+            calEvent.address = event.venue.address_1;
+            calEvent.description = event.description;
+            calEvent.rsvp = event.yes_rsvp_count;
+            return calEvent;
+        });
 
-	hbs.registerHelper('timeFormat', function(context, block) {
-		var format = block.hash.format || 'h:mm a';
-		return moment(context).utc().add(block.hash.utc, 'milliseconds').format(format);
-	});
-
-	hbs.registerHelper('daysLeft', function(context, block) {
-		var eventDate = moment(context);
-		var currentDate = moment();
-		return eventDate.diff(currentDate, 'days');
-	});
+        return JSON.stringify(calEvents);
+    });
 }
 
 module.exports = HbsHelpers;
