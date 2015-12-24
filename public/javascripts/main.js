@@ -1,5 +1,6 @@
-if(document.getElementById('calendar')) {
-    $(document).ready(function() {
+$(document).ready(function() {
+
+    if(document.getElementById('calendar')) {
         $('#calendar').fullCalendar({
             header: {
                 left: '',
@@ -21,10 +22,17 @@ if(document.getElementById('calendar')) {
                 $('.modal-body .info .venue').html(event.venue);
                 $('.modal-body .info .address').html(event.address);
                 $('.modal-body .info .description').html(event.description);
-                $('.modal-body .info #daysLeft').html(moment(event.start).diff(moment(), 'days') + " days left");
-                $('.modal-body .info #rsvp').html(event.rsvp + " going");
+                var daysLeft = moment(event.start).diff(moment(), 'days');
+                if (daysLeft >= 0) {
+                    $('.modal-body .info #daysLeft').html(daysLeft + " days left");
+                    $('.modal-body .info #rsvp').html(event.rsvp + " going");
+                } else {
+                    $('.modal-body .info #daysLeft').html(-1*daysLeft + " days ago");
+                    $('.modal-body .info #rsvp').html(event.rsvp + " went");
+                }
                 $('#eventModal').modal();
             }
         })
-    });
-}
+    }
+
+});
