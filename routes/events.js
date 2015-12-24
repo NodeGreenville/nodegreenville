@@ -22,7 +22,7 @@ function getGroup(callback) {
 
 function getEvents(callback) {
 	meetup.getEvents({'group_urlname': process.env.MEETUP_GROUP_NAME,
-                      'status': 'upcoming,past'}, callback);
+					  'status': 'upcoming,past'}, callback);
 }
 
 function renderIndex(res, next, err, results) {

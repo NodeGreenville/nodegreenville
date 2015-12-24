@@ -13,7 +13,7 @@ Item Border: #E8E8E7
 */
 
 body {
-    color: #545555;
+	color: #545555;
 	font-family: 'Lato', sans-serif;
 	padding-top: 50px;
 }
@@ -35,7 +35,7 @@ body {
 
 .navbar-inverse .navbar-brand {
 	height: 50px;
-    line-height: 30px;
+	line-height: 30px;
 	padding: 10px 10px;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .navbar-inverse .navbar-toggle {
 	background-color: #436B32;
-    border-color: #436B32;
+	border-color: #436B32;
 }
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
@@ -63,14 +63,14 @@ body {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #fff;
-    color: #fff;
+	background-color: #fff;
+	color: #fff;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #fff;
-    color: #fff;
+	background-color: #fff;
+	color: #fff;
 }
 
 #nav-logo {
@@ -84,14 +84,14 @@ body {
 }
 
 .hero h1 {
-    color: #AEAFAF;
+	color: #AEAFAF;
 	font-size: 40px;
 }
 
 /* Meetup Section */
 
 .meetup {
-    background: url('/images/ng_pattern.jpg');
+	background: url('/images/ng_pattern.jpg');
 	padding: 150px;
 }
 
@@ -114,57 +114,57 @@ body {
 /* Events */
 
 #calendar {
-    margin: auto;
-    padding: 20px 0;
-    width: 75%;
+	margin: auto;
+	padding: 20px 0;
+	width: 75%;
 }
 
 .fc-event {
-    background-color: #7FBD41;
-    border: 1px solid #7FBD41;
-    cursor: pointer;
+	background-color: #7FBD41;
+	border: 1px solid #7FBD41;
+	cursor: pointer;
 }
 
 .fc-event:hover {
-    background-color: #588244;
-    border: 1px solid #588244;
+	background-color: #588244;
+	border: 1px solid #588244;
 }
 
 .fc-day-grid-event .fc-content {
-    overflow: visible;
+	overflow: visible;
 	white-space: normal;
 }
 
 .modal-content {
-    border-radius: 12px 12px;
+	border-radius: 12px 12px;
 }
 
 .modal-header {
-    background-color: #7FBD41;
-    border-radius: 10px 10px 0 0;
-    color: #fff;
-    font-size: 25px;
+	background-color: #7FBD41;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-size: 25px;
 	font-weight: 700;
 }
 
 .modal-header .close:hover,
 .modal-header .close:focus {
-    color: #fff;
+	color: #fff;
 }
 
 .modal-body {
 	background-color: #F8F9F9;
-    border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
 }
 
 .modal-body .row {
-    align-items: center;
-    display: flex;
+	align-items: center;
+	display: flex;
 }
 
 .modal-body .date-box {
-    color: #7FBD41;
-    text-align: center;
+	color: #7FBD41;
+	text-align: center;
 }
 
 .modal-body .date {
@@ -175,7 +175,7 @@ body {
 .modal-body .day {
 	font-size: 20px;
 	font-weight: 700;
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .modal-body .info {
@@ -183,7 +183,7 @@ body {
 }
 
 .modal-body .venue {
-    color: #545555;
+	color: #545555;
 	font-size: 20px;
 	font-weight: 700;
 }
@@ -207,8 +207,8 @@ body {
 
 .footer {
 	background-color: #FFF;
-    color: #AEAFAF;
-    padding: 50px;
+	color: #AEAFAF;
+	padding: 50px;
 	text-align: center;
 }
 
@@ -221,7 +221,7 @@ body {
 }
 
 .footer #nav-footer {
-    display: block;
+	display: block;
 	height: 30px;
 	margin: 0 auto;
 }
@@ -232,7 +232,7 @@ body {
 }
 
 .img-icon {
-    display: inline-block;
+	display: inline-block;
 	height: 19px;
 }
 
