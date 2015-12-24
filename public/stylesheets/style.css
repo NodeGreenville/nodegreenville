@@ -13,9 +13,9 @@ Item Border: #E8E8E7
 */
 
 body {
-	padding-top: 50px;
+    color: #545555;
 	font-family: 'Lato', sans-serif;
-	color: #545555;
+	padding-top: 50px;
 }
 
 .font-brand {
@@ -35,8 +35,8 @@ body {
 
 .navbar-inverse .navbar-brand {
 	height: 50px;
+    line-height: 30px;
 	padding: 10px 10px;
-	line-height: 30px;
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
@@ -44,8 +44,8 @@ body {
 }
 
 .navbar-inverse .navbar-toggle {
-	border-color: #436B32;
 	background-color: #436B32;
+    border-color: #436B32;
 }
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
@@ -63,14 +63,14 @@ body {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-	color: #fff;
-	background-color: #fff;
+    background-color: #fff;
+    color: #fff;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-	color: #fff;
-	background-color: #fff;
+    background-color: #fff;
+    color: #fff;
 }
 
 #nav-logo {
@@ -84,15 +84,15 @@ body {
 }
 
 .hero h1 {
+    color: #AEAFAF;
 	font-size: 40px;
-	color: #AEAFAF;
 }
 
 /* Meetup Section */
 
 .meetup {
+    background: url('/images/ng_pattern.jpg');
 	padding: 150px;
-	background: url('/images/ng_pattern.jpg');
 }
 
 .meetup h2 {
@@ -115,89 +115,89 @@ body {
 
 #calendar {
     margin: auto;
+    padding: 20px 0;
     width: 75%;
-    padding: 20px 0px;
 }
 
 .fc-event {
-    cursor: pointer;
-    border: 1px solid #7FBD41;
     background-color: #7FBD41;
+    border: 1px solid #7FBD41;
+    cursor: pointer;
 }
 
 .fc-event:hover {
-    border: 1px solid #588244;
     background-color: #588244;
+    border: 1px solid #588244;
 }
 
 .fc-day-grid-event .fc-content {
+    overflow: visible;
 	white-space: normal;
-	overflow: visible;
 }
 
-#eventModal .modal-content {
+.modal-content {
     border-radius: 12px 12px;
 }
 
-#eventModal .modal-header {
+.modal-header {
+    background-color: #7FBD41;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
     font-size: 25px;
 	font-weight: 700;
-    background-color: #7FBD41;
-    color: #fff;
-    border-radius: 10px 10px 0 0;
 }
 
-#eventModal .modal-header .close:hover,
-#eventModal .modal-header .close:focus {
+.modal-header .close:hover,
+.modal-header .close:focus {
     color: #fff;
 }
 
-#eventModal .modal-body {
+.modal-body {
 	background-color: #F8F9F9;
     border-radius: 0 0 10px 10px;
 }
 
-#eventModal .modal-body .row {
-    display: flex;
+.modal-body .row {
     align-items: center;
+    display: flex;
 }
 
-#eventModal .modal-body .date-box {
+.modal-body .date-box {
     color: #7FBD41;
     text-align: center;
 }
 
-#eventModal .modal-body .date {
+.modal-body .date {
 	font-size: 30px;
 	font-weight: 700;
 }
 
-#eventModal .modal-body .day {
-	margin-top: 20px;
+.modal-body .day {
 	font-size: 20px;
 	font-weight: 700;
+    margin-top: 20px;
 }
 
-#eventModal .modal-body .info {
+.modal-body .info {
 	padding: 10px;
 }
 
-#eventModal .modal-body .venue {
+.modal-body .venue {
+    color: #545555;
 	font-size: 20px;
 	font-weight: 700;
-	color: #545555;
 }
 
-#eventModal .modal-body .address {
+.modal-body .address {
 	color: #AEAFAF;
 }
 
-#eventModal .modal-body .description {
+.modal-body .description {
 	font-weight: 300;
 	margin-top: 20px;
 }
 
-#eventModal .modal-body .stats {
+.modal-body .stats {
 	color: #AEAFAF;
 	float: left;
 	margin-right: 20px;
@@ -206,9 +206,9 @@ body {
 /* Footer */
 
 .footer {
-	padding: 50px;
-	color: #AEAFAF;
 	background-color: #FFF;
+    color: #AEAFAF;
+    padding: 50px;
 	text-align: center;
 }
 
@@ -221,8 +221,8 @@ body {
 }
 
 .footer #nav-footer {
+    display: block;
 	height: 30px;
-	display: block;
 	margin: 0 auto;
 }
 
@@ -232,8 +232,8 @@ body {
 }
 
 .img-icon {
+    display: inline-block;
 	height: 19px;
-	display: inline-block;
 }
 
 .img-icon .icon {

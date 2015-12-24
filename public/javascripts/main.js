@@ -7,6 +7,7 @@ $(document).ready(function() {
                 center: 'prev title next',
                 right: ''
             },
+            fixedWeekCount: false,
             events: forCalendar,
             eventRender: function (event, element) {
                 element.find('.fc-time').html(moment(event.start).format('h:mm a') +
