@@ -1,5 +1,4 @@
 var express = require('express');
-var ghost = require('./ghost-app/ghost-as-middleware');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -13,6 +12,7 @@ var app = express();
 // view engine setup
 app.engine('hbs', hbs.express4({
 	partialsDir: __dirname + '/views/layout/partials',
+	defaultLayout: __dirname + '/views/layout/default.hbs',
 	layoutsDir: __dirname + '/views/layout'
 }));
 app.set('view engine', 'hbs');
@@ -25,15 +25,12 @@ require('./helpers/hbsHelpers')(hbs);
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', home);
 app.use('/events', events);
-app.use('/blog', ghost({
-	config: path.join(__dirname, '/ghost-app/config.js')
-}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
