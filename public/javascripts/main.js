@@ -33,7 +33,14 @@ $(document).ready(function() {
 				}
 				$('#eventModal').modal();
 			}
-		})
+		});
 	}
+
+	// Login modal
+	$('#navbar').on('click', '#login', function (event) {
+		//event.preventDefault();
+		console.log('Login modal was clicked');
+		$('#loginModal').modal();
+	});
 
 });
