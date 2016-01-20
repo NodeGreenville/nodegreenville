@@ -18,8 +18,18 @@ body {
 	padding-top: 50px;
 }
 
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
 .font-brand {
 	color: #7FBD41;
+}
+
+.login-fields * {
+	display: inline-block;
+	margin: 1em;
 }
 
 /* Navbar */

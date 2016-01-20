@@ -7,7 +7,25 @@ var bodyParser = require('body-parser');
 var hbs = require('express-hbs');
 var home = require('./routes/home');
 var events = require('./routes/events');
+var login = require('./routes/login');
+var passport = require('passport');
+var GitHubStrategy = require('passport-github2').Strategy;
 var app = express();
+
+
+// Authentication setup
+/*
+passport.use(new GitHubStrategy({
+
+}))
+passport.serializeUser(function (user, done) {
+	done(null, user);
+});
+
+passport.deserializeUser(function (obj, done) {
+	done(null, obj);
+});
+*/
 
 // view engine setup
 app.engine('hbs', hbs.express4({
@@ -31,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', home);
 app.use('/events', events);
+//app.use('/login', login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
