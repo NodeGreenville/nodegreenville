@@ -18,6 +18,7 @@
     "dotenv": "^1.2.0",
     "express": "~4.12.4",
     "express-hbs": "^0.8.4",
+    "express-session": "^1.13.0",
     "meetup-api": "^0.1.29",
     "moment": "^2.10.6",
     "morgan": "~1.5.3",

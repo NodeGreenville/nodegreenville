@@ -13,7 +13,11 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/">Home</a></li>
 				<li><a href="/events">Events</a></li>
+				{{#if authenticated}}
+				<li><a id="logout" href="/logout">Logout</a></li>
+				{{else}}
 				<li><a id="login" href="#">Login</a></li>
+				{{/if}}
 			</ul>
 		</div>
 	</div>

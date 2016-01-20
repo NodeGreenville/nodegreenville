@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 	// Login modal
 	$('#navbar').on('click', '#login', function (event) {
-		
+
 		/* Override events modal title when loggin in from events page */
 		$('.modal-title').html('Admin Login');
 		$('#loginModal').modal();

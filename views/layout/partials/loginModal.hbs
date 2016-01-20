@@ -10,22 +10,15 @@
 				</div>
 
 				<div id='div-forms'>
-					<form id="login-form">
+					<form id="login-form" action='/auth/github' method='get'>
 						<div class="modal-body">
 
 							<div class="row">
 								<div class="col-xs-8 col-centered">
 									<div id="login-msg">
-										<i class="fa fa-github fa-lg"></i>&nbsp;
-										<span id="Login message">GitHub Login</span><br>
+										<i class="fa fa-github fa-5x"></i>&nbsp;
+										<span id="Login message">GitHub Login</span>
 									</div>
-									<input id="login-username" class="form-control" type="text"
-												 placeholder="Username" required>
-									<br>
-
-									<input id="login-password" class="form-control" type="password"
-												 placeholder="Password" required>
-
 								</div>
 							</div>
 						</div>
@@ -35,7 +28,7 @@
 				<div class="row">
 					<div class="col-xs-8 col-centered">
 						<div class="login-fields col-centered">
-							<button type="submit" class="btn btn-primary btn-larg">Login</button>
+							<button form='login-form' type="submit" class="btn btn-primary btn-larg">Login</button>
 							<div class="checkbox">
 								<label>
 									<input type="checkbox">Remember me
