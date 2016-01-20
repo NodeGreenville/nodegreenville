@@ -4,15 +4,45 @@
 
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title"></h4>
+				<h4 class="modal-title">Admin Login</h4>
 			</div>
 
-			<div class="modal-body">
-				<div class="row">
-					<p>Login Stuff</p>
-				</div>
+			<div id='div-forms'>
+				<form id="login-form">
+					<div class="modal-body">
+
+						<div class="row">
+							<div class="col-xs-8 col-offset-4">
+								<div id="login-msg">
+									<i class="fa fa-gihub"></i>
+									<span id="Login message">GitHub Login</span>
+								</div>
+								<input id="login-username" class="form-control" type="text"
+											 placeholder="Username (type ERROR for error effect)" required>
+								<br>
+								<input id="login-password" class="form-control" type="password"
+											 placeholder="Password" required>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox">Remember me
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary btn-larg">Login</button>
+			</div>
+			<div>
+				<button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+				<button id="login_register_btn" type="button" class="btn btn-link">Register</button>
 			</div>
 
+			<div class="modal-footer">
+
+			</div>
 		</div>
 	</div>
 </div>
