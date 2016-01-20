@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var passport = require('passport');
 var GitHubStrategy = require('passport-github2').Strategy;
+//var passport = require('passport');
+//var GitHubStrategy = require('passport-github2').Strategy;
 
 // Authentication setup
 
@@ -15,7 +16,7 @@ passport.deserializeUser(function (obj, done) {
 });
 
 
-router.get('/github', passport.authenticate('github'{ scope: ['user:email']}));
+router.get('/github', passport.authenticate('github', { scope: ['user:email']}));
 router.get('/github/callback', passport.authenticate('github', {
   failureRedirect: '/'
 },
@@ -27,3 +28,34 @@ function (req, res) {
 
 module.exports = router;
 */
+
+module.exports = function (passport) {
+
+	passport.use('github', new GitHubStrategy({
+			clientID: process.env.GITHUB_CLIENT_ID,
+			clientSecret: process.env.GITHUB_CLIENT_SECRET,
+			callbackURL: 'http://localhost:3100/auth/github/callback'
+		},
+		function (accessToken, refreshToken, profile, done) {
+			return done(null, profile);
+		}
+	));
+
+	passport.serializeUser(function (user, done) {
+		done(null, user);
+	});
+
+	passport.deserializeUser(function (obj, done) {
+		done(null, obj);
+	});
+
+	router.get('/github', passport.authenticate('github', { scope: ['user:email']}));
+	router.get('/github/callback', passport.authenticate('github', {
+	  failureRedirect: '/'
+	}),
+	function (req, res) {
+	  res.redirect('/');
+	});
+
+	return router;
+}

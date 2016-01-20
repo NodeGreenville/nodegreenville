@@ -8,38 +8,9 @@ var expressSession = require('express-session');
 var hbs = require('express-hbs');
 var home = require('./routes/home');
 var events = require('./routes/events');
-var auth = require('./routes/auth');
 var passport = require('passport');
-var GitHubStrategy = require('passport-github2').Strategy;
 require('dotenv').load();
-var GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
-var GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 var app = express();
-
-passport.use('github', new GitHubStrategy({
-		clientID: GITHUB_CLIENT_ID,
-		clientSecret: GITHUB_CLIENT_SECRET,
-		callbackURL: 'http://localhost:3100/auth/github/callback'
-	},
-	function (accessToken, refreshToken, profile, done) {
-    console.log(profile);
-		return done(null, profile);
-	}
-));
-
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/')
-}
-
-passport.serializeUser(function (user, done) {
-	done(null, user);
-});
-
-passport.deserializeUser(function (obj, done) {
-	done(null, obj);
-});
-
 
 // view engine setup
 app.engine('hbs', hbs.express4({
@@ -60,33 +31,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(expressSession({
-	secret: GITHUB_CLIENT_SECRET || 'secret',
+	secret: process.env.GITHUB_CLIENT_SECRET || 'secret',
 	resave: false,
 	saveUninitialized: false
 }));
+
 app.use(passport.initialize());
 app.use(passport.session())
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', home);
 app.use('/events', events);
-
-app.get('/auth/github',
-  passport.authenticate('github', { scope: ['user:email'] }),
-  function (req, res) {
-
-	});
-
-app.get('/auth/github/callback',
-	passport.authenticate('github', { failureRedirect: '/' }),
-	function (req, res) {
-		res.redirect('/');
-	});
-
-	app.get('/logout', function (req, res) {
-		req.logout();
-		res.redirect('/');
-	});
+app.use('/auth', require('./routes/auth')(passport));
+app.get('/logout', function (req, res) {
+	req.logout();
+	res.redirect('/');
+});
 
 
 
