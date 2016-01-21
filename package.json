@@ -22,6 +22,7 @@
     "meetup-api": "^0.1.29",
     "moment": "^2.10.6",
     "morgan": "~1.5.3",
+    "octonode": "^0.7.4",
     "passport": "^0.3.2",
     "passport-github2": "^0.1.9",
     "serve-favicon": "~2.2.1"
