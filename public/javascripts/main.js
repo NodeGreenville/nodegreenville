@@ -44,4 +44,8 @@ $(document).ready(function() {
 		$('#loginModal').modal();
 	});
 
+	$('body').on('click', '#submit-icon', function (event) {
+		$('#login-form').submit();
+	});
+
 });
