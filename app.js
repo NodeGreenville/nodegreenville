@@ -43,12 +43,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', home);
 app.use('/events', events);
 app.use('/auth', require('./routes/auth')(passport));
-app.get('/logout', function (req, res) {
-	req.logout();
-	res.redirect('/');
-});
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
