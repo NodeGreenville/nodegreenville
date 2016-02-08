@@ -9,8 +9,10 @@ var hbs = require('express-hbs');
 var home = require('./routes/home');
 var events = require('./routes/events');
 var passport = require('passport');
-require('dotenv').load();
 var app = express();
+var ParseServer = require('parse-server').ParseServer;
+
+require('dotenv').load();
 
 // view engine setup
 app.engine('hbs', hbs.express4({
@@ -40,7 +42,18 @@ app.use(passport.initialize());
 app.use(passport.session())
 app.use(express.static(path.join(__dirname, 'public')));
 
+var api = new ParseServer({
+  databaseURI: process.env.MONGO_URI || 'mongodb://localhost:27017/test',
+  cloud: './cloud/main.js',
+  appId: process.env.APP_ID || 'myAppId',
+  fileKey: process.env.FILE_KEY || 'myFileKey',
+  masterKey: process.env.MASTER_KEY || 'mySecretMasterKey',
+  restAPIKey: process.env.REST_KEY || 'myRESTAPIKey'
+});
+
+
 app.use('/', home);
+app.use('/api/1', api);
 app.use('/events', events);
 app.use('/auth', require('./routes/auth')(passport));
 
