@@ -51,10 +51,10 @@ var api = new ParseServer({
   restAPIKey: process.env.REST_KEY || 'myRESTAPIKey'
 });
 
-app.use('/api', api);
 app.use('/', home);
 app.use('/events', events);
 app.use('/auth', require('./routes/auth')(passport));
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
