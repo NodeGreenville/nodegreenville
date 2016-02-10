@@ -53,7 +53,7 @@ var api = new ParseServer({
 
 
 app.use('/', home);
-app.use('/api/1', api);
+app.use('/api', api);
 app.use('/events', events);
 app.use('/auth', require('./routes/auth')(passport));
 
