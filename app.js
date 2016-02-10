@@ -51,9 +51,8 @@ var api = new ParseServer({
   restAPIKey: process.env.REST_KEY || 'myRESTAPIKey'
 });
 
-
-app.use('/', home);
 app.use('/api', api);
+app.use('/', home);
 app.use('/events', events);
 app.use('/auth', require('./routes/auth')(passport));
 
@@ -68,7 +67,7 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development' || 'staging') {
+if (app.get('env') === 'development' || app.get('env') ==='staging') {
 	app.use(function(err, req, res, next) {
 		res.status(err.status || 500);
 		res.render('error', {
