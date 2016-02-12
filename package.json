@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha test/"
+    "test": "mocha test/ --recursive"
   },
   "engines": {
     "node": "4.x"
@@ -31,6 +31,7 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.3",
+    "nightwatch": "^0.8.16",
     "supertest": "^1.1.0"
   }
 }

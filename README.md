@@ -26,6 +26,9 @@ http://localhost:3000/blog to access the ghost blog
 The heroku deployments for staging and prod have a Postgres database that SHOULD be available at `process.env.DATABASE_URL`
 
 ### Ghost (as Middleware)
-The [GhostJS](https://ghost.org) portion of the code is located in the ```./ghost-app``` directory.
+~~The [GhostJS](https://ghost.org) portion of the code is located in the ```./ghost-app``` directory.~~
 
 ### Bookshelf.js (ORM)
+
+### E2E Testing
+[NighwatchJS](http://nightwatchjs.org/guide)
