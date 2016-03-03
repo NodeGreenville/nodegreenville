@@ -33,7 +33,19 @@ $(document).ready(function() {
 				}
 				$('#eventModal').modal();
 			}
-		})
+		});
 	}
+
+	// Login modal
+	$('#navbar').on('click', '#login', function (event) {
+
+		/* Override events modal title when loggin in from events page */
+		$('.modal-title').html('Admin Login');
+		$('#loginModal').modal();
+	});
+
+	$('body').on('click', '#submit-icon', function (event) {
+		$('#login-form').submit();
+	});
 
 });

@@ -4,7 +4,13 @@
 	<body>
 		{{> navBar}}
 
+		{{> loginModal}}
+
 		{{{ body }}}
+		
+		{{# if authenticated}}
+		Welcome {{ user.displayName }}
+		{{/if}}
 
 		{{> footer}}
 
