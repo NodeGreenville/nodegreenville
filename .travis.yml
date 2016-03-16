@@ -4,6 +4,9 @@ node_js:
 before_script:
 - npm install -g mocha
 - export TZ=America/New_York
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
 deploy:
   provider: heroku
   api_key:

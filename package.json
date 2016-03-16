@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha test/ --recursive"
+    "test": "mocha test/TDD/ --recursive && node ./bin/run-nightwatch.js"
   },
   "engines": {
     "node": "4.x"

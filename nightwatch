@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('nightwatch/bin/runner.js');
+  require('nightwatch/bin/runner.js');   // For posix environmets

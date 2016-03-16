@@ -4,7 +4,7 @@ var fs = require('fs');
 var expect = chai.expect;
 var request = require('supertest');
 var hbs = require('express-hbs');
-var app = require('../app');
+var app = require('../../app');
 
 describe('Routes', function() {
 
