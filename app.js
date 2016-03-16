@@ -48,7 +48,8 @@ var api = new ParseServer({
   appId: process.env.APP_ID || 'myAppId',
   fileKey: process.env.FILE_KEY || 'myFileKey',
   masterKey: process.env.MASTER_KEY || 'mySecretMasterKey',
-  restAPIKey: process.env.REST_KEY || 'myRESTAPIKey'
+  restAPIKey: process.env.REST_KEY || 'myRESTAPIKey',
+  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse'
 });
 
 app.use('/', home);
