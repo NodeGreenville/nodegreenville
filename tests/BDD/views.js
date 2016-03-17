@@ -12,6 +12,16 @@ module.exports = {
   after : function(browser) {
     child.kill();  // Shutdown processes after tests
   },
+  'Login modal appears' : function (browser) {
+
+    browser
+      .url('http://localhost:' + PORT)
+      .waitForElementVisible('body', 5000)
+      .waitForElementVisible('li a#login', 5000)
+      .click('a#login')
+      .pause(1000)
+      .assert.elementPresent('#submit-icon');
+  },
   'Home View' : function (browser) {
     var node = 'h1 span.font-brand';
     browser
@@ -19,8 +29,7 @@ module.exports = {
       .waitForElementVisible(node, 10000)
       .getText(node, function(result) {
         this.assert.equal(result.value, "NodeGreenville")
-      })
-      .end();
+      });
   },
   'Events View' : function (browser) {
     browser
