@@ -11,6 +11,7 @@ var events = require('./routes/events');
 var passport = require('passport');
 var app = express();
 var ParseServer = require('parse-server').ParseServer;
+var flash = require('connect-flash');
 
 require('dotenv').load();
 
@@ -37,6 +38,7 @@ app.use(expressSession({
 	resave: false,
 	saveUninitialized: false
 }));
+app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session())
@@ -87,6 +89,7 @@ app.use(function(err, req, res, next) {
 		error: {}
 	});
 });
+
 
 
 module.exports = app;

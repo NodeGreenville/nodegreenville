@@ -14,7 +14,7 @@ module.exports = {
     browser
       .url('http://localhost:' + PORT)
       .waitForElementVisible('body', 5000)
-      .waitForElementVisible('li a#login', 1000)
+      .waitForElementVisible('li a#login', 5000)
       .click('a#login')
       .pause(1000)
       .assert.elementPresent('#submit-icon')

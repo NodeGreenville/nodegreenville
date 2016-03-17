@@ -7,10 +7,15 @@
 		{{> loginModal}}
 
 		{{{ body }}}
-		
+
 		{{# if authenticated}}
 		Welcome {{ user.displayName }}
 		{{/if}}
+		{{#each message}}
+		<div class="flash">
+			{{this}}
+		</div>
+		{{/each}}
 
 		{{> footer}}
 

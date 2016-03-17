@@ -23,6 +23,10 @@ body {
 	margin: 0 auto;
 }
 
+.flash {
+	text-align: center;
+}
+
 .font-brand {
 	color: #7FBD41;
 }

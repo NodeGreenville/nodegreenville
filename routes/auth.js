@@ -23,9 +23,14 @@ module.exports = function (passport) {
 				var member = orgIDs.indexOf(NODEGREENVILLE_ID) >= 0;
 				if (member) {
 					// User is apart of the NodeGreenville Group log them in
-					return done(null, profile);
+					return done(null, profile, {
+						message: 'Successful Login'
+					});
 				} else {
-					return done(null, false);
+						return done(null, false, {
+							message: 'Could not login. Contact NodeGreenville'
+							}
+						);
 				}
 			});
 		}
@@ -42,7 +47,8 @@ module.exports = function (passport) {
 	router.get('/github', passport.authenticate('github', { scope: ['user:email', 'read:org']}));
 	router.get('/github/callback', passport.authenticate('github', {
 	  failureRedirect: '/',
-		failureFlash: true
+		failureFlash: true,
+		successFlash: true
 	}),
 	function (req, res) {
 	  res.redirect('/');
