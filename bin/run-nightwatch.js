@@ -11,7 +11,10 @@ if(os.platform() === 'win32') {
     {stdio: 'inherit'}  // pipe nightwatch messages to parent stdio
   );
 } else { // use this for linux or mac systems
-  child = spawn('chmod', ['a+x', 'nightwatch']);
+  child = spawn('chmod', [
+    'a+x', 'nightwatch', './bin/webdrivers/linux/chromedriver'
+    ]
+  );
   child.on('close', function() {
     var child1 = spawn('node', [
       'nightwatch',
