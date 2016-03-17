@@ -1,7 +1,8 @@
-var os = require('os');
+var platform = require('os').platform();
+
 
 module.exports = (function (settings) {
-    switch (os.platform()) {
+    switch (platform) {
         case 'win32':
             settings.selenium.cli_args['webdriver.chrome.driver'] = 'bin/webdrivers/win/chromedriver.exe';
             break;

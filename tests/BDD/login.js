@@ -3,8 +3,11 @@ var child;
 const PORT = process.env.PORT || 3000;
 
 module.exports = {
-  before : function(browser) {
+  before : function(browser, done) {
     child = spawn('node', ['./bin/www']);
+    setTimeout(function() {
+      done();
+    }, 5000);
   },
   after : function(browser) {
     child.kill();  // Shutdown processes after tests
