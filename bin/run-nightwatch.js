@@ -5,7 +5,7 @@ var child;
 if(os.platform() === 'win32') {
   child = spawn('node', [
     './nightwatch.js',
-    '--group', 'test/BDD',
+    '--group', 'tests/BDD',
     '--config', 'nightwatch.conf.js'
     ],
     {stdio: 'inherit'}  // pipe nightwatch messages to parent stdio
@@ -18,7 +18,7 @@ if(os.platform() === 'win32') {
   child.on('close', function() {
     var child1 = spawn('node', [
       'nightwatch',
-      '--group', 'test/BDD',
+      '--group', 'tests/BDD',
       '--config', 'nightwatch.conf.js'
       ],
       {stdio: 'inherit'}  // Same here. Pipe nightwatch output to parent process
