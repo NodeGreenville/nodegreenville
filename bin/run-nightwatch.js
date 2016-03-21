@@ -2,8 +2,9 @@ const os = require('os');
 const spawn = require('child_process').spawn;
 var child;
 
+var env = (process.env.REST_KEY)? 'BDD_TRAVIS,TDD': 'BDD,TDD';
+
 if(os.platform() === 'win32') {
-  var env = (process.env.REST_KEY)? 'BDD_TRAVIS,TDD': 'BDD,TDD';
   child = spawn('node', [
     './nightwatch.js',
     '--config', 'nightwatch.conf.js',
@@ -18,7 +19,6 @@ if(os.platform() === 'win32') {
     ]
   );
   child.on('close', function() {
-    var env = (process.env.REST_KEY)? 'BDD_TRAVIS,TDD': 'BDD,TDD';
     var child1 = spawn('node', [
       'nightwatch',
       '--config', 'nightwatch.conf.js',
