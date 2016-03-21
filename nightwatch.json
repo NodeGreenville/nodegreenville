@@ -47,6 +47,13 @@
       "filter": "tests/BDD/*",
       "exclude": ""
     },
+    "BDD_TRAVIS": {
+      "selenium": {
+        "start_session": true
+      },
+      "filter": "tests/BDD/*",
+      "exclude": ""
+    },
 
     "chrome" : {
       "desiredCapabilities": {

@@ -4,10 +4,12 @@ const PORT = process.env.PORT || 3000;
 
 module.exports = {
   before : function(browser, done) {
-    child = spawn('node', ['./bin/www']);
-    setTimeout(function() {
-      done();
-    }, 5000);
+    if(!process.env.REST_KEY) {  // We are not in a travis environment
+      child = spawn('node', ['./bin/www']);
+      setTimeout(function() {
+        done();
+      }, 5000);
+    }
   },
   after : function(browser) {
     browser.end(function() {
