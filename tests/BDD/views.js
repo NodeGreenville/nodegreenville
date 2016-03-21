@@ -10,10 +10,11 @@ module.exports = {
     }, 5000);
   },
   after : function(browser) {
-    child.kill();  // Shutdown processes after tests
+    browser.end(function() {
+      child.kill();
+    });
   },
   'Login modal appears' : function (browser) {
-
     browser
       .url('http://localhost:' + PORT)
       .waitForElementVisible('body', 5000)
@@ -25,7 +26,11 @@ module.exports = {
   'Home View' : function (browser) {
     var node = 'h1 span.font-brand';
     browser
-      .url('http://localhost:' + PORT)
+      .url('http://localhost:' + PORT, function(response) {
+        console.log('The response: ');
+        console.log(response);
+        browser.assert.equal(response.state, 'success');
+      })
       .waitForElementVisible(node, 10000)
       .getText(node, function(result) {
         this.assert.equal(result.value, "NodeGreenville")
@@ -34,7 +39,17 @@ module.exports = {
   'Events View' : function (browser) {
     browser
       .url('http://localhost:' + PORT + '/events')
-      .waitForElementVisible('#calendar', 5000)
-      .end();
+      .waitForElementVisible('#calendar', 5000);
+  },
+  'Test 404': function(browser) {
+    browser
+      .url('http://localhost:' + PORT + '/fake/route')
+      .getText('h1', function(result) {
+        this.assert.equal(result.value, "Not Found");
+      })
+      .getText('h2', function(result) {
+        this.assert.equal(result.value, "404");
+      });
+
   }
 };

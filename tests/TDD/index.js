@@ -5,10 +5,23 @@ var expect = chai.expect;
 var request = require('supertest');*/
 var hbs = require('express-hbs');
 var app = require('../../app');
+var spawn = require('child_process').spawn;
+var child;
+var child_running;
 
 module.exports = {
+  before: function(client, done) {
+    done();
+  },
+  after: function(client, done) {
+    client.end(function() {
+      done();
+    });
+  },
   'demo Routes': function(client) {
     // For async stuff
+    console.log('What is client?');
+    console.log(client);
     client.assert.ok('TEST');
   },
   testHandlebarsHelpers: function(client) {
