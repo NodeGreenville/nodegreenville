@@ -51,6 +51,11 @@
       "selenium": {
         "start_session": true
       },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      },
       "filter": "tests/BDD/*",
       "exclude": ""
     },
