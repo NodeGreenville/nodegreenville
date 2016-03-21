@@ -26,11 +26,10 @@ module.exports = {
   'Home View' : function (browser) {
     var node = 'h1 span.font-brand';
     browser
-      .url('http://localhost:' + PORT, function(response) {
-        console.log('The response: ');
-        console.log(response);
-        browser.assert.equal(response.state, 'success');
-      })
+      .url('http://localhost:' + PORT)
+      .getTitle(function(title) {
+        this.assert.equal(title, "NG - Home")
+      })  // Replaces  route testing with mocha
       .waitForElementVisible(node, 10000)
       .getText(node, function(result) {
         this.assert.equal(result.value, "NodeGreenville")
@@ -39,11 +38,17 @@ module.exports = {
   'Events View' : function (browser) {
     browser
       .url('http://localhost:' + PORT + '/events')
+      .getTitle(function(title) {
+        this.assert.equal(title, "NG - Events")
+      })
       .waitForElementVisible('#calendar', 5000);
   },
   'Test 404': function(browser) {
     browser
       .url('http://localhost:' + PORT + '/fake/route')
+      .getTitle(function(title) {
+        this.assert.equal(title, "NG - Error")
+      })
       .getText('h1', function(result) {
         this.assert.equal(result.value, "Not Found");
       })

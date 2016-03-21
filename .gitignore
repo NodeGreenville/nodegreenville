@@ -8,3 +8,5 @@ node_modules
 ghost-dev.db
 coverage
 reports/
+tags
+.tags_swap

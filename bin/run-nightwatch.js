@@ -13,7 +13,7 @@ if(os.platform() === 'win32') {
 } else { // use this for linux or mac systems
   child = spawn('chmod', [
     'a+x', 'nightwatch', './bin/webdrivers/linux/chromedriver',
-    './bin/webdrivers/linux/chromedriver'
+    './bin/webdrivers/mac/chromedriver'
     ]
   );
   child.on('close', function() {
