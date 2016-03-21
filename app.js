@@ -13,7 +13,9 @@ var app = express();
 var ParseServer = require('parse-server').ParseServer;
 var flash = require('connect-flash');
 
-require('dotenv').load();
+if (!process.env.REST_KEY) {
+	require('dotenv').load();
+}
 
 // view engine setup
 app.engine('hbs', hbs.express4({
