@@ -1,3 +1,4 @@
+var appName = 'NG';
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,8 +7,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressSession = require('express-session');
 var hbs = require('express-hbs');
-var home = require('./routes/home');
-var events = require('./routes/events');
+var home = require('./routes/home')(appName);
+var events = require('./routes/events')(appName);
 var passport = require('passport');
 var app = express();
 var ParseServer = require('parse-server').ParseServer;
