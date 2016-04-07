@@ -11,6 +11,7 @@ var HbsHelpers = function(hbs) {
 			calEvent.address = event.venue.address_1;
 			calEvent.description = event.description;
 			calEvent.rsvp = event.yes_rsvp_count;
+			calEvent.findUs = event.how_to_find_us;
 			return calEvent;
 		});
 

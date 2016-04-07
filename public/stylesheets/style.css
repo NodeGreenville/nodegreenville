@@ -206,7 +206,7 @@ body {
 	color: #AEAFAF;
 }
 
-.modal-body .description {
+.modal-body .description, .findUs {
 	font-weight: 300;
 	margin-top: 20px;
 }

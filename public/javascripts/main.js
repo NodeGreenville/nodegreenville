@@ -22,6 +22,7 @@ $(document).ready(function() {
 				$('.modal-body .date-box .day').html(moment(event.start).format('ddd'));
 				$('.modal-body .info .venue').html(event.venue);
 				$('.modal-body .info .address').html(event.address);
+				$('.modal-body .info .findUs').html(event.findUs);
 				$('.modal-body .info .description').html(event.description);
 				var daysLeft = moment(event.start).diff(moment(), 'days');
 				if (daysLeft >= 0) {
